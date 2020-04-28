@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<topic name="career">
+    	<category>
+    	    <pattern>INTRO</pattern>
+    	    <template>
+    	        Let's go through a few quick questions to determine what career might
+    	        suit you.<split/><think><set name="topic">program</set></think><srai>PROGRAM</srai>
+    	    </template>
+    	</category>
+	</topic>
+	<topic name="program">
+	    <category>
+	        <pattern>PROGRAM</pattern>
+	        <template>Do you like to program?
+    	        <reply>
+    	            <text>Yes</text>
+    	            <postback>YES</postback>
+    	        </reply>
+    	        <reply>
+    	            <text>No</text>
+    	            <postback>NO</postback>
+    	        </reply>
+	        </template>
+	    </category>
+	    <category>
+	        <pattern>YES</pattern>
+	        <template>
+	            <think>
+	                <set name="topic">game</set>
+	            </think>
+	            Does building video games interest you?
+	            <reply>
+    	            <text>Yes</text>
+    	            <postback>YES</postback>
+    	        </reply>
+    	        <reply>
+    	            <text>No</text>
+    	            <postback>NO</postback>
+    	        </reply>
+	        </template>
+	    </category>
+	    <category>
+	        <pattern>NO</pattern>
+	        <template>
+	            <think><set name="topic">hardware</set></think>
+	            Do you like to work on computers?
+	            <reply>
+    	            <text>Yes</text>
+    	            <postback>YES</postback>
+    	        </reply>
+    	        <reply>
+    	            <text>No</text>
+    	            <postback>NO</postback>
+    	        </reply>
+	        </template>
+	    </category>
+	</topic>
+	<topic name="hardware">
+	    <category>
+	        <pattern>YES</pattern>
+	        <template>You should look into being a Computer Hardware Engineer!</template>
+	    </category>
+	    <category>
+	        <pattern>NO</pattern>
+	        <template>You should look into Quality Assurance!</template>
+	    </category>
+	</topic>
+	<topic name="game">
+	    <category>
+	        <pattern>YES</pattern>
+	        <template>You should look into being a Game Designer!</template>
+	    </category>
+	    <category>
+	        <pattern>NO</pattern>
+	        <template>
+	            <think><set name="topic">database</set></think>
+	            Do databases interest you?
+	            <reply>
+    	            <text>Yes</text>
+    	            <postback>YES</postback>
+    	        </reply>
+    	        <reply>
+    	            <text>No</text>
+    	            <postback>NO</postback>
+    	        </reply>
+	        </template>
+	    </category>
+	</topic>
+	<topic name="database">
+	    <category>
+	        <pattern>YES</pattern>
+	        <template>You should look into being a Database Administrator!</template>
+	    </category>
+	    <category>
+	        <pattern>NO</pattern>
+	        <template>You should look into being a Software Developer!</template>
+	    </category>
+	</topic>
+</aiml>

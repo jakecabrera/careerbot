@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <condition name="first_message">
+            <li>
+                <value>
+                    true
+                </value>
+                Welcome! I can help you decide on a good career path as a
+                computer science major.<split/>
+                <think>
+                    <set name="topic">career</set>
+                    <set name="first_message">false</set>
+                </think>
+                <srai>
+                    INTRO
+                </srai>
+            </li>
+            <li>
+                I didn't quite recognize that response. Please type "Yes" or "No" 
+                to the last question. You can also use the reply buttons when available.
+            </li>
+        </condition>
+    </template>
+  </category>
+</aiml>
